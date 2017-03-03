@@ -1,4 +1,249 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>JavaScript定义变量的作用域 | The Building 10</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">JavaScript定义变量的作用域</h1><a id="logo" href="/.">The Building 10</a><p class="description">Coding Study Blog</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">JavaScript定义变量的作用域</h1><div class="post-meta">Feb 28, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;someNum; i++) &#123; <span class="comment">//在(...)里定义的变量是全局变量</span></div><div class="line">  <span class="keyword">var</span> delta;                    <span class="comment">//在&#123;...&#125;里定义的变量,作用域只有&#123;...&#125;这个范围</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="123for (var i=0; i&amp;lt;someNum; i++) &amp;#123; //在(...)里定义的变量是全局变量  var delta;                    //在&amp;#123;...&amp;#125;里定义的变量,作用域只有&amp;#123;...&amp;#125;这个范围&amp;#125;
+在React.JS中的情况：
+1234567891011121314151617class Boar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript定义变量的作用域">
+<meta property="og:url" content="http://hieverest.github.com/2017/02/28/JS变量的作用域/index.html">
+<meta property="og:site_name" content="The Building 10">
+<meta property="og:description" content="123for (var i=0; i&amp;lt;someNum; i++) &amp;#123; //在(...)里定义的变量是全局变量  var delta;                    //在&amp;#123;...&amp;#125;里定义的变量,作用域只有&amp;#123;...&amp;#125;这个范围&amp;#125;
+在React.JS中的情况：
+1234567891011121314151617class Boar">
+<meta property="og:updated_time" content="2017-02-28T12:32:35.113Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript定义变量的作用域">
+<meta name="twitter:description" content="123for (var i=0; i&amp;lt;someNum; i++) &amp;#123; //在(...)里定义的变量是全局变量  var delta;                    //在&amp;#123;...&amp;#125;里定义的变量,作用域只有&amp;#123;...&amp;#125;这个范围&amp;#125;
+在React.JS中的情况：
+1234567891011121314151617class Boar">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>JavaScript定义变量的作用域</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/03/03/React Tutorial/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2017/02/24/JavaScript链式作用域/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://hieverest.github.com/2017/02/28/JS变量的作用域/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&text=JavaScript定义变量的作用域"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&is_video=false&description=JavaScript定义变量的作用域"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript定义变量的作用域&body=Check out this article: http://hieverest.github.com/2017/02/28/JS变量的作用域/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&name=JavaScript定义变量的作用域&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JavaScript定义变量的作用域
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">The Building 10</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-02-28T12:09:47.000Z" itemprop="datePublished">2017-02-28</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>, <a class="tag-link" href="/tags/Scope/">Scope</a>, <a class="tag-link" href="/tags/variable/">variable</a>, <a class="tag-link" href="/tags/作用域/">作用域</a>, <a class="tag-link" href="/tags/变量/">变量</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;someNum; i++) &#123; <span class="comment">//在(...)里定义的变量是全局变量</span></div><div class="line">  <span class="keyword">var</span> delta;                    <span class="comment">//在&#123;...&#125;里定义的变量,作用域只有&#123;...&#125;这个范围</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在React.JS中的情况：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Board</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="comment">//const和let定义的变量的作用域都只在该方法中，如下所示：</span></div><div class="line">  render() &#123;</div><div class="line">    <span class="keyword">const</span> winner = calculateWinner(<span class="keyword">this</span>.state.squares);</div><div class="line">    <span class="keyword">let</span> status;</div><div class="line">    <span class="keyword">if</span> (winner) &#123;</div><div class="line">      status = <span class="string">'Winner: '</span> + winner;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      status = <span class="string">'Next player: '</span> + (<span class="keyword">this</span>.state.xIsNext ? <span class="string">'X'</span> : <span class="string">'O'</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      <span class="comment">//...</span></div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://hieverest.github.com/2017/02/28/JS变量的作用域/" data-id="ciztkwzvd0000kkdgj5eb3kzm" class="article-share-link">Share</a><div class="tags"><a href="/tags/JavaScript/">JavaScript</a><a href="/tags/Scope/">Scope</a><a href="/tags/variable/">variable</a><a href="/tags/作用域/">作用域</a><a href="/tags/变量/">变量</a></div><div class="post-nav"><a href="/2017/03/03/React Tutorial/" class="pre">React Tutorial - Tic Tac Toe Extra features Solution</a><a href="/2017/02/24/JavaScript链式作用域/" class="next">JavaScript的链式作用域</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://hieverest.github.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/Tic-Tac-Toe-Extra-features-solution/" style="font-size: 15px;">Tic Tac Toe Extra features solution</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/variable/" style="font-size: 15px;">variable</a> <a href="/tags/作用域/" style="font-size: 15px;">作用域</a> <a href="/tags/变量/" style="font-size: 15px;">变量</a> <a href="/tags/react-tutorial/" style="font-size: 15px;">react tutorial</a> <a href="/tags/react教程/" style="font-size: 15px;">react教程</a> <a href="/tags/Scope/" style="font-size: 15px;">Scope</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/算法/" style="font-size: 15px;">算法</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/前端/" style="font-size: 15px;">前端</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/03/React Tutorial/">React Tutorial - Tic Tac Toe Extra features Solution</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/JS变量的作用域/">JavaScript定义变量的作用域</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/JavaScript链式作用域/">JavaScript的链式作用域</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/算法汇总/">一些算法题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/JavaScript语法/">JavaScript语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/面试题汇总/">面试题汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/19/hexo_summary/">搭建Github+Hexoguo过程的总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/18/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">The Building 10.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://hieverest.github.com/2017/02/28/JS变量的作用域/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&text=JavaScript定义变量的作用域"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&is_video=false&description=JavaScript定义变量的作用域"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript定义变量的作用域&body=Check out this article: http://hieverest.github.com/2017/02/28/JS变量的作用域/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&title=JavaScript定义变量的作用域"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://hieverest.github.com/2017/02/28/JS变量的作用域/&name=JavaScript定义变量的作用域&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Qianchen He
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
