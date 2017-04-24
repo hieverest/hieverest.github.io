@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="12345constructor(props) &amp;#123;    super(props)    this.handleChange = this.handleChange.bind(this)    this.handleRefreshClick = this.handleRefreshClic">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="The Building 10"/>
+        <meta property="og:title" content="React - why need to bind function in constructor"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +31,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>blog - The Building 10</title>
+    <title>React - why need to bind function in constructor - The Building 10</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -126,50 +128,82 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#blog</h1>
+                <div class="post-heading">
+                    <h1>React - why need to bind function in constructor</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-04-01
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/JavaScript/">#JavaScript</a> <a href="/tags/react/">#react</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2017/02/19/hexo_summary/">
-        <h1 class="post-title archive">
-            搭建Github+Hexoguo过程的总结
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-02-19
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props)</div><div class="line">    <span class="keyword">this</span>.handleChange = <span class="keyword">this</span>.handleChange.bind(<span class="keyword">this</span>)</div><div class="line">    <span class="keyword">this</span>.handleRefreshClick = <span class="keyword">this</span>.handleRefreshClick.bind(<span class="keyword">this</span>)</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><code>this.handleRefreshClick.bind(something)</code> returns a new function, in which references to <code>this</code> will refer to <code>something</code>. This is a way of saving the current value of <code>this</code>, which is in scope during the call to the constructor, so that it can be used later when the function is called.</li>
+<li>If your functions don’t require access to the state of your component, then sure, you don’t need to bind them.</li>
+</ol>
+<hr>
+<p>The argument in favour of adding these lines to the constructor is so that the new bound functions are only created once per instance of the class. You could also use</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">onClick=&#123;<span class="keyword">this</span>.handleRefreshClick.bind(<span class="keyword">this</span>)&#125;</div></pre></td></tr></table></figure>
+<p>or (ES6):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">onClick=&#123;() =&gt; <span class="keyword">this</span>.handleRefreshClick()&#125;</div></pre></td></tr></table></figure>
+<p>but either of these methods will create a new function every time the component is re-rendered.</p>
+<p>Reference: <a href="http://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor" target="_blank" rel="external">http://stackoverflow.com/questions/38334062/why-do-you-need-to-bind-a-function-in-a-constructor</a></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
