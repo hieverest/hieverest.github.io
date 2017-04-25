@@ -8,13 +8,13 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="null">
-    <meta name="keyword"  content="undefined">
+    <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          JavaScript的链式作用域 - undefined
+          JavaScript的链式作用域 - Buiding 10
         
     </title>
 
@@ -117,7 +117,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">The Building 10</a>
+            <a class="navbar-brand" href="/">Building 10</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -133,6 +133,30 @@
                         <a href="/">Home</a>
                     </li>
 
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
                     
                     
                 </ul>
@@ -202,7 +226,7 @@
 <p>还是要举例：</p>
 <p>例子一：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( echo );<span class="comment">//function echo()&#123;return 1;&#125;;</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">echo</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( a );//undefined</div><div class="line"></div><div class="line">var a=function()&#123;return 1;&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( a );<span class="comment">//undefined</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;;</div></pre></td></tr></table></figure>
 <p>所以，函数的定义也可以引申出一句话，请将函数定义放在顶部（先定义后调用）！！</p>
 <p>其实还是习惯的问题，JS中一些代码的优良习惯有别于其它语言。建议大家读一下《Javascript语言精粹》。在开始学习一门语言时，最好从欣赏优秀的代码开始。而JS中，大家都喜欢用一系列充满迷惑性的代码来加深自己的理解，这其实是一个误区。</p>
 <p>另外说一点，this关键字，laruence的解释很简洁到位：”谁调用，谁就是this”。英文版更详细一点：“In JavaScript <code>this</code> always refers to the “owner” of the function we’re executing, or rather, to the object that a function is a method of. ”，中文解释：“在JavaScript中，<code>this</code>永远引用我们所执行函数的拥有者，更准确的说，this引用一个函数的方法对象”</p>
@@ -239,6 +263,10 @@
 
                 <!-- disqus comment start -->
                 
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
                 <!-- disqus comment end -->
             </div>
             
@@ -254,6 +282,16 @@
 
                 <!-- Featured Tags -->
                 
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
+                    </div>
+                </section>
+                
 
                 <!-- Friends Blog -->
                 
@@ -265,8 +303,57 @@
 
 
 
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "your-disqus-ID";
+    var disqus_identifier = "http://hieverest.github.com/2017/02/24/JavaScript链式作用域/";
+    var disqus_url = "http://hieverest.github.com/2017/02/24/JavaScript链式作用域/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
 
 
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
 
 
@@ -284,9 +371,36 @@
                 
 
                 
-
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/YenYuHsuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
                 
 
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/YenYuHsuan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/yu-hsuan-yen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
                 
 
                 </ul>
@@ -374,6 +488,22 @@
 
 
 <!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
 
 
 
