@@ -226,7 +226,7 @@
 <p>还是要举例：</p>
 <p>例子一：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( echo );<span class="comment">//function echo()&#123;return 1;&#125;;</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">echo</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( a );<span class="comment">//undefined</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alert( a );//undefined</div><div class="line"></div><div class="line">var a=function()&#123;return 1;&#125;;</div></pre></td></tr></table></figure>
 <p>所以，函数的定义也可以引申出一句话，请将函数定义放在顶部（先定义后调用）！！</p>
 <p>其实还是习惯的问题，JS中一些代码的优良习惯有别于其它语言。建议大家读一下《Javascript语言精粹》。在开始学习一门语言时，最好从欣赏优秀的代码开始。而JS中，大家都喜欢用一系列充满迷惑性的代码来加深自己的理解，这其实是一个误区。</p>
 <p>另外说一点，this关键字，laruence的解释很简洁到位：”谁调用，谁就是this”。英文版更详细一点：“In JavaScript <code>this</code> always refers to the “owner” of the function we’re executing, or rather, to the object that a function is a method of. ”，中文解释：“在JavaScript中，<code>this</code>永远引用我们所执行函数的拥有者，更准确的说，this引用一个函数的方法对象”</p>
@@ -338,7 +338,7 @@
         anchors.options = {
           visible: 'hover',
           placement: 'left',
-          icon: 'ℬ'
+          icon: '#'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
